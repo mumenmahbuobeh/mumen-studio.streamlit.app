@@ -13,7 +13,7 @@ st.set_page_config(page_title="MUMEN Brand AI", page_icon="🎨", layout="wide")
 # ---------------------------------------------------------
 @st.cache_resource
 def get_model():
-    return new_session("isnet-general-use")
+    return new_session("u2net")
 
 # ---------------------------------------------------------
 # 3. Initialize Session State
@@ -208,5 +208,6 @@ if uploaded_file is not None:
                 )
             except Exception as e:
                 st.error(f"Error: {e}")
+
 
 st.markdown(f"<div class='footer'>{t['footer']}</div>", unsafe_allow_html=True)
